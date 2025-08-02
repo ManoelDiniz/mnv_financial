@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -44,5 +45,37 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    /**
+     * Get the accounts for the user.
+     */
+    public function accounts(): HasMany
+    {
+        return $this->hasMany(Account::class);
+    }
+
+    /**
+     * Get active accounts for the user.
+     */
+    public function activeAccounts(): HasMany
+    {
+        return $this->hasMany(Account::class)->where('is_active', true);
+    }
+
+    /**
+     * Get total balance across all active accounts.
+     */
+    public function getTotalBalanceAttribute(): float
+    {
+        return $this->activeAccounts()->sum('balance');
+    }
+
+    /**
+     * Get formatted total balance.
+     */
+    public function getFormattedTotalBalanceAttribute(): string
+    {
+        return 'R$ ' . number_format($this->total_balance, 2, ',', '.');
     }
 }

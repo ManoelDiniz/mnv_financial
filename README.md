@@ -1,62 +1,207 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# MNV Financial 💰
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://img.shields.io/badge/Laravel-12-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel 12">
+  <img src="https://img.shields.io/badge/PHP-8.2+-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP 8.2+">
+  <img src="https://img.shields.io/badge/TailwindCSS-4.0-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS 4.0">
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License">
 </p>
 
-## About Laravel
+## 📖 Sobre o Projeto
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+MNV Financial é uma aplicação web moderna para gestão financeira pessoal, desenvolvida com Laravel 12 e tecnologias de ponta. O sistema permite controle completo das finanças pessoais de forma intuitiva e segura.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 🎯 Objetivo
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Fornecer uma solução completa para:
+- Controle de receitas e despesas
+- Gestão de contas bancárias
+- Planejamento orçamentário
+- Relatórios financeiros detalhados
+- Análise de gastos e tendências
 
-## Learning Laravel
+## ⚡ Status Atual
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+🚧 **Projeto em Desenvolvimento Inicial**
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Atualmente o projeto conta com a estrutura base do Laravel. Consulte o arquivo [AVALIACAO_PROJETO.md](./AVALIACAO_PROJETO.md) para uma análise detalhada do estado atual e recomendações.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🛠️ Tecnologias Utilizadas
 
-## Laravel Sponsors
+### Backend
+- **Laravel 12** - Framework PHP moderno
+- **PHP 8.2+** - Linguagem de programação
+- **MySQL/PostgreSQL** - Banco de dados
+- **Redis** - Cache e sessões
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Frontend
+- **Tailwind CSS 4.0** - Framework CSS utilitário
+- **Alpine.js** - Framework JavaScript reativo
+- **Vite** - Build tool moderna
+- **Blade** - Template engine do Laravel
 
-### Premium Partners
+### Ferramentas de Desenvolvimento
+- **Laravel Pail** - Log monitoring
+- **Laravel Pint** - Code style fixer
+- **Laravel Sail** - Ambiente Docker
+- **PHPUnit** - Testes automatizados
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 🚀 Instalação e Configuração
 
-## Contributing
+### Pré-requisitos
+- PHP 8.2 ou superior
+- Composer
+- Node.js 18+ e NPM
+- MySQL/PostgreSQL
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Passo a Passo
 
-## Code of Conduct
+1. **Clone o repositório**
+```bash
+git clone https://github.com/ManoelDiniz/mnv_financial.git
+cd mnv_financial
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+2. **Instale as dependências PHP**
+```bash
+composer install
+```
 
-## Security Vulnerabilities
+3. **Configure o ambiente**
+```bash
+cp .env.example .env
+php artisan key:generate
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+4. **Configure o banco de dados**
+Edite o arquivo `.env` com suas credenciais de banco de dados:
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=mnv_financial
+DB_USERNAME=seu_usuario
+DB_PASSWORD=sua_senha
+```
 
-## License
+5. **Execute as migrations**
+```bash
+php artisan migrate
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# mnv_financial
+6. **Instale dependências do frontend**
+```bash
+npm install
+```
+
+7. **Compile os assets**
+```bash
+npm run dev
+```
+
+8. **Inicie o servidor**
+```bash
+php artisan serve
+```
+
+Acesse: `http://localhost:8000`
+
+## 🧪 Testes
+
+Execute os testes automatizados:
+
+```bash
+# Todos os testes
+php artisan test
+
+# Testes específicos
+php artisan test --filter ExampleTest
+
+# Com cobertura
+php artisan test --coverage
+```
+
+## 📝 Desenvolvimento
+
+### Scripts Disponíveis
+
+```bash
+# Servidor de desenvolvimento completo
+composer run dev
+
+# Apenas servidor Laravel
+php artisan serve
+
+# Linting e correção de código
+composer run pint
+
+# Testes
+composer run test
+```
+
+### Estrutura do Projeto
+
+```
+app/
+├── Http/Controllers/    # Controladores
+├── Models/             # Modelos Eloquent
+├── Services/           # Lógica de negócio
+└── Providers/          # Service Providers
+
+resources/
+├── views/              # Templates Blade
+├── js/                 # JavaScript
+└── css/                # Estilos CSS
+
+database/
+├── migrations/         # Migrações
+├── seeders/           # Seeders
+└── factories/         # Factories
+
+tests/
+├── Feature/           # Testes de funcionalidade
+└── Unit/              # Testes unitários
+```
+
+## 🔒 Segurança
+
+- Autenticação Laravel Sanctum
+- Validação de dados de entrada
+- Proteção CSRF
+- Rate limiting
+- Logs de auditoria
+
+## 📊 Funcionalidades Planejadas
+
+- [ ] Sistema de autenticação completo
+- [ ] Dashboard financeiro
+- [ ] Gestão de contas bancárias
+- [ ] Registro de transações
+- [ ] Categorização de gastos
+- [ ] Relatórios e gráficos
+- [ ] Orçamentos e metas
+- [ ] Importação de extratos
+- [ ] Notificações e lembretes
+- [ ] API RESTful
+
+## 🤝 Contribuição
+
+1. Fork o projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 📞 Contato
+
+**Manoel Diniz** - [@ManoelDiniz](https://github.com/ManoelDiniz)
+
+Link do Projeto: [https://github.com/ManoelDiniz/mnv_financial](https://github.com/ManoelDiniz/mnv_financial)
+
+---
+
+⭐ **Se este projeto te ajudou, considere dar uma estrela!**
