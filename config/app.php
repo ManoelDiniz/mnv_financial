@@ -123,4 +123,10 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    'blackbox' => [
+        'api_key' => env('BLACKBOX_API_KEY',),
+        'api_timeout' => env('BLACKBOX_API_TIMEOUT', 15),
+    ],
+
+
 ];
